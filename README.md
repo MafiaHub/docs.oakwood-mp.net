@@ -1,6 +1,6 @@
-# Documentation source code
+# Mafia: Oakwood documentation
 
-This is the source code of our documentation for Mafia: Oakwood.
+This is the documentation for Mafia: Oakwood.
 
 ## License
 
