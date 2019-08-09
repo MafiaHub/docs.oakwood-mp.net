@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Server Setup](README.md)
+* [Server Setup](server-setup.md)
 * [Public API](public-api/README.md)
   * [Player](public-api/player.md)
 * [Languages](languages/README.md)
