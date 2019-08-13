@@ -6,7 +6,7 @@ description: This page describes the player API
 
 ## Spawn
 
-`player_spawn(player)` 
+`playerSpawn(player)` 
 
 Spawns the player.
 
@@ -31,12 +31,12 @@ Make sure you set health to a valid value, since Spawn method doesn't take care 
 
 {% tab title="Example" %}
 ```javascript
-oak.event('player_connect', async pid => {
+oak.event('playerConnect', async pid => {
     console.log('[info] player connected', pid)
 
-    oak.player_position_set(pid, [-1774.59301758, -4.88487052917, -2.40491962433])
-    oak.player_health_set(pid, 200)
-    oak.player_spawn(pid)
+    oak.playerPositionSet(pid, [-1774.59301758, -4.88487052917, -2.40491962433])
+    oak.playerHealthSet(pid, 200)
+    oak.playerSpawn(pid)
 })
 ```
 {% endtab %}
@@ -44,7 +44,7 @@ oak.event('player_connect', async pid => {
 
 ## ​Despawn
 
-`player_despawn(player)` 
+`playerDespawn(player)` 
 
 Removes the player from the map.
 
@@ -68,7 +68,7 @@ Useful when you want to create a spectator mode in your game.
 {% tab title="Example" %}
 ```javascript
 oak.cmd('spectator', async pid => {
-    oak.player_despawn(pid)
+    oak.playerDespawn(pid)
 })
 ```
 {% endtab %}
@@ -76,7 +76,7 @@ oak.cmd('spectator', async pid => {
 
 ## Invalid
 
-`player_invalid(player)` 
+`playerInvalid(player)` 
 
 Checks whether the player ID is invalid.
 
@@ -100,12 +100,12 @@ None.
 {% tab title="Example" %}
 ```javascript
 oak.cmd('respawn', async pid => {
-    if (await oak.player_invalid(pid)) {
+    if (await oak.playerInvalid(pid)) {
         oak.log('Not happy ;1')
         return
     }
-    
-    oak.player_despawn(pid)
+
+    oak.playerDespawn(pid)
 })
 ```
 {% endtab %}
@@ -113,7 +113,7 @@ oak.cmd('respawn', async pid => {
 
 ## Kick
 
-`player_kick(player, string)` 
+`playerKick(player, string)` 
 
 Kicks the player from the game.
 
@@ -129,7 +129,6 @@ Useful when you want to create a spectator mode in your game.
 | :--- | :--- |
 | player | Player ID |
 | string | Reason |
-|  |  |
 
 #### Returns
 
@@ -139,7 +138,7 @@ Useful when you want to create a spectator mode in your game.
 {% tab title="Example" %}
 ```javascript
 oak.cmd('kickme', async pid => {
-    oak.player_kick(pid, 'You were a bad boy!')
+    oak.playerKick(pid, 'You were a bad boy!')
 })
 ```
 {% endtab %}
@@ -147,7 +146,7 @@ oak.cmd('kickme', async pid => {
 
 ## Kill
 
-`player_kill(player)` 
+`playerKill(player)` 
 
 Force kills the player.
 
@@ -171,7 +170,7 @@ Kills the player naturally.
 {% tab title="Example" %}
 ```javascript
 oak.cmd('suicide', async pid => {
-    oak.player_kill(pid)
+    oak.playerKill(pid)
 })
 ```
 {% endtab %}
@@ -179,7 +178,7 @@ oak.cmd('suicide', async pid => {
 
 ## Play anim
 
-`player_despawn(player, string)` 
+`playerDespawn(player, string)` 
 
 Removes the player from the map.
 
@@ -210,7 +209,7 @@ There is no animation list provided, search game folder for possible animation n
 
 ## Set model
 
-`player_model_set(player, string)` 
+`playerModelSet(player, string)` 
 
 Changes the player model.
 
@@ -235,7 +234,7 @@ You can use models from the [following](../assets/asset-player-models.md) listin
 {% tab title="Example" %}
 ```javascript
 oak.cmd('tommy', async pid => {
-    oak.player_model_set(pid, 'Tommy')
+    oak.playerModelSet(pid, 'Tommy')
 })
 ```
 {% endtab %}
@@ -243,7 +242,7 @@ oak.cmd('tommy', async pid => {
 
 ## Set health
 
-`player_health_set(player, float)` 
+`playerHealthSet(player, float)` 
 
 Sets the player health.
 
@@ -272,7 +271,7 @@ We will make sure health is uniform on the server-side, but right now, you need 
 {% tab title="Example" %}
 ```javascript
 oak.cmd('healme', async pid => {
-    oak.player_health_set(pid, 200)
+    oak.playerHealthSet(pid, 200)
 })
 ```
 {% endtab %}
@@ -280,7 +279,7 @@ oak.cmd('healme', async pid => {
 
 ## Set position
 
-`player_position_set(player, vec3)` 
+`playerPositionSet(player, vec3)` 
 
 Sets the player position.
 
@@ -308,8 +307,8 @@ oak.cmd('setpos', async (pid, _x, _y, _z) => {
     const x = parseFloat(_x)
     const y = parseFloat(_y)
     const z = parseFloat(_z)
-    
-    oak.player_position_set(pid, [x, y, z])
+
+    oak.playerPositionSet(pid, [x, y, z])
 })
 ```
 {% endtab %}
@@ -317,7 +316,7 @@ oak.cmd('setpos', async (pid, _x, _y, _z) => {
 
 ## Set direction
 
-`player_direction_set(player, vec3)` 
+`playerDirectionSet(player, vec3)` 
 
 Sets the player's forward direction vector.
 
@@ -345,8 +344,8 @@ oak.cmd('setdir', async (pid, _x, _y, _z) => {
     const x = parseFloat(_x)
     const y = parseFloat(_y)
     const z = parseFloat(_z)
-    
-    oak.player_direction_set(pid, [x, y, z])
+
+    oak.playerDirectionSet(pid, [x, y, z])
 })
 ```
 {% endtab %}
@@ -354,7 +353,7 @@ oak.cmd('setdir', async (pid, _x, _y, _z) => {
 
 ## Set heading
 
-`player_heading_set(player, float)` 
+`playerHeadingSet(player, float)` 
 
 Sets the player heading angle.
 
@@ -379,7 +378,7 @@ Uses a ±180 degree format.
 {% tab title="Example" %}
 ```javascript
 oak.cmd('rotateto', async (pid, angle) => {
-    oak.player_heading_set(pid, parseFloat(angle))
+    oak.playerHeadingSet(pid, parseFloat(angle))
 })
 ```
 {% endtab %}
@@ -387,7 +386,7 @@ oak.cmd('rotateto', async (pid, angle) => {
 
 ## Get name
 
-`player_name_get(player)` 
+`playerNameGet(player)` 
 
 Retrieves the player name.
 
@@ -411,7 +410,7 @@ None.
 {% tab title="Example" %}
 ```javascript
 oak.cmd('alert', async pid => {
-    const name = await oak.player_name_get(pid)
+    const name = await oak.playerNameGet(pid)
     oak.chat_broadcast('Guess who is back: ' + name)
 })
 ```
@@ -420,7 +419,7 @@ oak.cmd('alert', async pid => {
 
 ## Get model
 
-`player_model_get(player)` 
+`playerModelGet(player)` 
 
 Retrieves the player's model.
 
@@ -450,7 +449,7 @@ None.
 
 ## Get health
 
-`player_health_get(player)` 
+`playerHealthGet(player)` 
 
 Retrieves the current player's health.
 
@@ -478,7 +477,7 @@ We will make sure health is uniform on the server-side, but right now, you need 
 {% tab title="Example" %}
 ```javascript
 oak.cmd('printhp', async pid => {
-    const hp = parseFloat(await oak.player_health_get(pid))
+    const hp = parseFloat(await oak.playerHealthGet(pid))
     oak.chat_send('Current HP: ' + hp)
 })
 ```
@@ -487,7 +486,7 @@ oak.cmd('printhp', async pid => {
 
 ## Get heading
 
-`player_heading_get(player)` 
+`playerHeadingGet(player)` 
 
 Retrieves the player's heading angle.
 
@@ -517,7 +516,7 @@ Uses a ±180 degree format.
 
 ## Get position
 
-`player_position_get(player)` 
+`playerPositionGet(player)` 
 
 Retrieves the player position.
 
@@ -541,7 +540,7 @@ None.
 {% tab title="Example" %}
 ```javascript
 oak.cmd('getpos', async pid => {
-    const pos = await oak.player_position_get(pid)
+    const pos = await oak.playerPositionGet(pid)
     oak.chat_send(pid, 'My position: ' + pos)
 })
 ```
@@ -550,7 +549,7 @@ oak.cmd('getpos', async pid => {
 
 ## Get direction
 
-`player_direction_get(player)` 
+`playerDirectionGet(player)` 
 
 Retrieves the player direction.
 
@@ -589,7 +588,7 @@ There are several visibility options you can set for the player:
 
 ### Get visibility
 
-`player_visibility_get(player, visibility_type)` 
+`playerVisibilityGet(player, visibility_type)` 
 
 Retrieves the current player's visibility.
 
@@ -620,7 +619,7 @@ None.
 
 ### Set visibility
 
-`player_visibility_set(player, visibility_type, int)` 
+`playerVisibilitySet(player, visibility_type, int)` 
 
 Sets the current player's visibility setting.
 
