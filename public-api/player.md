@@ -6,7 +6,7 @@ description: This page describes the player API
 
 ## Spawn
 
-`playerSpawn(player)` 
+`playerSpawn(player)`
 
 Spawns the player.
 
@@ -44,7 +44,7 @@ oak.event('playerConnect', async pid => {
 
 ## ​Despawn
 
-`playerDespawn(player)` 
+`playerDespawn(player)`
 
 Removes the player from the map.
 
@@ -76,7 +76,7 @@ oak.cmd('spectator', async pid => {
 
 ## Invalid
 
-`playerInvalid(player)` 
+`playerInvalid(player)`
 
 Checks whether the player ID is invalid.
 
@@ -113,7 +113,7 @@ oak.cmd('respawn', async pid => {
 
 ## Kick
 
-`playerKick(player, string)` 
+`playerKick(player, string)`
 
 Kicks the player from the game.
 
@@ -146,7 +146,7 @@ oak.cmd('kickme', async pid => {
 
 ## Kill
 
-`playerKill(player)` 
+`playerKill(player)`
 
 Force kills the player.
 
@@ -178,7 +178,7 @@ oak.cmd('suicide', async pid => {
 
 ## Play anim
 
-`playerDespawn(player, string)` 
+`playerDespawn(player, string)`
 
 Removes the player from the map.
 
@@ -209,7 +209,7 @@ There is no animation list provided, search game folder for possible animation n
 
 ## Set model
 
-`playerModelSet(player, string)` 
+`playerModelSet(player, string)`
 
 Changes the player model.
 
@@ -242,7 +242,7 @@ oak.cmd('tommy', async pid => {
 
 ## Set health
 
-`playerHealthSet(player, float)` 
+`playerHealthSet(player, float)`
 
 Sets the player health.
 
@@ -279,7 +279,7 @@ oak.cmd('healme', async pid => {
 
 ## Set position
 
-`playerPositionSet(player, vec3)` 
+`playerPositionSet(player, vec3)`
 
 Sets the player position.
 
@@ -316,7 +316,7 @@ oak.cmd('setpos', async (pid, _x, _y, _z) => {
 
 ## Set direction
 
-`playerDirectionSet(player, vec3)` 
+`playerDirectionSet(player, vec3)`
 
 Sets the player's forward direction vector.
 
@@ -353,7 +353,7 @@ oak.cmd('setdir', async (pid, _x, _y, _z) => {
 
 ## Set heading
 
-`playerHeadingSet(player, float)` 
+`playerHeadingSet(player, float)`
 
 Sets the player heading angle.
 
@@ -386,7 +386,7 @@ oak.cmd('rotateto', async (pid, angle) => {
 
 ## Get name
 
-`playerNameGet(player)` 
+`playerNameGet(player)`
 
 Retrieves the player name.
 
@@ -419,7 +419,7 @@ oak.cmd('alert', async pid => {
 
 ## Get model
 
-`playerModelGet(player)` 
+`playerModelGet(player)`
 
 Retrieves the player's model.
 
@@ -449,7 +449,7 @@ None.
 
 ## Get health
 
-`playerHealthGet(player)` 
+`playerHealthGet(player)`
 
 Retrieves the current player's health.
 
@@ -486,7 +486,7 @@ oak.cmd('printhp', async pid => {
 
 ## Get heading
 
-`playerHeadingGet(player)` 
+`playerHeadingGet(player)`
 
 Retrieves the player's heading angle.
 
@@ -516,7 +516,7 @@ Uses a ±180 degree format.
 
 ## Get position
 
-`playerPositionGet(player)` 
+`playerPositionGet(player)`
 
 Retrieves the player position.
 
@@ -549,7 +549,7 @@ oak.cmd('getpos', async pid => {
 
 ## Get direction
 
-`playerDirectionGet(player)` 
+`playerDirectionGet(player)`
 
 Retrieves the player direction.
 
@@ -588,7 +588,7 @@ There are several visibility options you can set for the player:
 
 ### Get visibility
 
-`playerVisibilityGet(player, visibility_type)` 
+`playerVisibilityGet(player, visibility_type)`
 
 Retrieves the current player's visibility.
 
@@ -619,7 +619,7 @@ None.
 
 ### Set visibility
 
-`playerVisibilitySet(player, visibility_type, int)` 
+`playerVisibilitySet(player, visibility_type, int)`
 
 Sets the current player's visibility setting.
 
