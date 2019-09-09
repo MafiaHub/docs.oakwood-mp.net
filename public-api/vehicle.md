@@ -4,6 +4,35 @@ description: This page describes the vehicle API
 
 # Vehicle
 
+## Get vehicles
+
+`vehicleList()`
+
+Retrieves all online vehicle IDs.
+
+{% tabs %}
+{% tab title="Details" %}
+#### Remarks
+
+#### Arguments
+
+| Type | Description |
+| :--- | :--- |
+
+#### Returns
+
+Vehicle IDs collection.
+
+{% endtab %}
+
+{% tab title="Example" %}
+```javascript
+// TODO
+```
+{% endtab %}
+{% endtabs %}
+
+
 ## Spawn
 
 `vehicleSpawn(string, vec3, float)`

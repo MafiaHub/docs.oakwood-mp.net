@@ -4,6 +4,34 @@ description: This page describes the player API
 
 # Player
 
+## Get players
+
+`playerList()`
+
+Retrieves all online player IDs.
+
+{% tabs %}
+{% tab title="Details" %}
+#### Remarks
+
+#### Arguments
+
+| Type | Description |
+| :--- | :--- |
+
+#### Returns
+
+Player IDs collection.
+
+{% endtab %}
+
+{% tab title="Example" %}
+```javascript
+// TODO
+```
+{% endtab %}
+{% endtabs %}
+
 ## Spawn
 
 `playerSpawn(player)`
@@ -411,7 +439,7 @@ None.
 ```javascript
 oak.cmd('alert', async pid => {
     const name = await oak.playerNameGet(pid)
-    oak.chat_broadcast('Guess who is back: ' + name)
+    oak.chatBroadcast('Guess who is back: ' + name)
 })
 ```
 {% endtab %}
@@ -478,7 +506,7 @@ We will make sure health is uniform on the server-side, but right now, you need 
 ```javascript
 oak.cmd('printhp', async pid => {
     const hp = parseFloat(await oak.playerHealthGet(pid))
-    oak.chat_send('Current HP: ' + hp)
+    oak.chatSend('Current HP: ' + hp)
 })
 ```
 {% endtab %}
@@ -541,7 +569,7 @@ None.
 ```javascript
 oak.cmd('getpos', async pid => {
     const pos = await oak.playerPositionGet(pid)
-    oak.chat_send(pid, 'My position: ' + pos)
+    oak.chatSend(pid, 'My position: ' + pos)
 })
 ```
 {% endtab %}
