@@ -81,9 +81,9 @@ Call it in interval to actually count numbers down.
 {% endtab %}
 {% endtabs %}
 
-## Alert
+## Announce
 
-`hudAlert(player, string)`
+`hudAnnounce(player, string, int)`
 
 Displays a splash/alert message in the centre of the screen.
 
@@ -97,6 +97,38 @@ Displays a splash/alert message in the centre of the screen.
 | :--- | :--- |
 | player | Player ID |
 | string | Text to display |
+| int    | Duration |
+
+#### Returns
+
+0 if successful, -1 if failed
+
+{% endtab %}
+
+{% tab title="Example" %}
+```javascript
+// TODO
+```
+{% endtab %}
+{% endtabs %}
+
+## Message
+
+`hudMessage(player, string, int)`
+
+Displays a message in the left bottom corner of the screen.
+
+{% tabs %}
+{% tab title="Details" %}
+#### Remarks
+
+#### Arguments
+
+| Type | Description |
+| :--- | :--- |
+| player | Player ID |
+| string | Text to display |
+| int    | Color (RGBA) |
 
 #### Returns
 
