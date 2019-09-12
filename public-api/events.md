@@ -8,8 +8,6 @@ description: This page describes server-side events
 
 `start()`
 
-Gamemode start
-
 {% tabs %}
 {% tab title="Details" %}
 #### Remarks
@@ -31,11 +29,34 @@ oak.event('start', () => {
 {% endtab %}
 {% endtabs %}
 
+## Server console
+
+`console(text)`
+
+{% tabs %}
+{% tab title="Details" %}
+#### Remarks
+
+Executed on server console input.
+
+#### Arguments
+
+| Type | Description |
+| string | Text |
+| :--- | :--- |
+
+{% endtab %}
+
+{% tab title="Example" %}
+```javascript
+// TODO
+```
+{% endtab %}
+{% endtabs %}
+
 ## Unknown chat command
 
 `unknownCommand(pid, text)`
-
-Unknown chat command
 
 {% tabs %}
 {% tab title="Details" %}
@@ -63,8 +84,6 @@ oak.event('unknownCommand', (pid, text) => {
 
 `stop()`
 
-Gamemode stop
-
 {% tabs %}
 {% tab title="Details" %}
 #### Remarks
@@ -90,8 +109,6 @@ oak.event('start', () => {
 ## Player connect
 
 `playerConnect(pid)`
-
-Player connection
 
 {% tabs %}
 {% tab title="Details" %}
@@ -127,8 +144,6 @@ oak.event('playerConnect', async pid => {
 
 `playerDisconnect(pid)`
 
-Player disconnection
-
 {% tabs %}
 {% tab title="Details" %}
 #### Remarks
@@ -159,8 +174,6 @@ oak.event('playerDisconnect', async pid => {
 ## Player death
 
 `playerDeath(pid)`
-
-Player death
 
 {% tabs %}
 {% tab title="Details" %}
@@ -193,8 +206,6 @@ oak.event('playerDeath', async pid => {
 
 `playerhit(pid, atkr, float)`
 
-Player death
-
 {% tabs %}
 {% tab title="Details" %}
 #### Remarks
@@ -222,8 +233,6 @@ Happens when attacker lands a hit on another player.
 ## Vehicle player use
 
 `vehicleUse(veh, pid, success, seatId, enterOrLeave)`
-
-Vehicle player use
 
 {% tabs %}
 {% tab title="Details" %}
@@ -255,3 +264,30 @@ oak.event("vehicleUse", async (veh, pid, success, seatId, enterOrLeave) => {
 {% endtab %}
 {% endtabs %}
 
+## Player key
+
+`playerKey(pid, vkey, down)`
+
+{% tabs %}
+{% tab title="Details" %}
+#### Remarks
+
+Executed on player key press. The key codes are documented at [MSDN page](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes).
+
+#### Arguments
+
+| Type | Description |
+| player | Player ID |
+| int | Virtual Key |
+| int | Is Key Down |
+
+| :--- | :--- |
+
+{% endtab %}
+
+{% tab title="Example" %}
+```javascript
+// TODO
+```
+{% endtab %}
+{% endtabs %}
