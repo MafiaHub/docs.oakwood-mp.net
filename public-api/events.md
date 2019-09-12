@@ -277,11 +277,11 @@ Executed on player key press. The key codes are documented at [MSDN page](https:
 #### Arguments
 
 | Type | Description |
+| :--- | :--- |
 | player | Player ID |
 | int | Virtual Key |
 | int | Is Key Down |
 
-| :--- | :--- |
 
 {% endtab %}
 
