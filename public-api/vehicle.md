@@ -323,6 +323,45 @@ Set vehicle transparency value
 {% endtab %}
 {% endtabs %}
 
+## Set lock
+
+`vehicleLockSet(vehicle, int)`
+
+Locks/Unlocks the vehicle
+
+{% tabs %}
+{% tab title="Details" %}
+#### Remarks
+
+0 for unlock, 1 for lock.
+
+#### Arguments
+
+| Type | Description |
+| :--- | :--- |
+| vehicle | Vehicle ID |
+| int | Lock State |
+
+#### Returns
+
+0 if successful, -1 if failed
+{% endtab %}
+
+{% tab title="Example" %}
+```javascript
+oak.cmd('lock', async (pid, state) => {
+    const veh = await oak.vehiclePlayerInside(pid)
+    if (await oak.vehicleInvalid(veh)) return;
+    state = parseInt(state)
+    stateMsg = (state === 0) ? "unlocked" : "locked"
+
+    oak.chatSend(pid, `Vehicle is now ${stateMsg}!`)
+    oak.vehicleLockSet(veh, state)
+})
+```
+{% endtab %}
+{% endtabs %}
+
 ## Get position
 
 `vehiclePositionGet(vehicle)`
@@ -469,6 +508,37 @@ Retrieves the vehicle's transparency value.
 ```
 {% endtab %}
 {% endtabs %}
+
+## Get lock
+
+`vehicleLockGet(vehicle)`
+
+Retrieves the vehicle's lock state.
+
+{% tabs %}
+{% tab title="Details" %}
+#### Remarks
+
+0 for unlocked, 1 for locked.
+
+#### Arguments
+
+| Type | Description |
+| :--- | :--- |
+| vehicle | Vehicle ID |
+
+#### Returns
+
+`int` lock state
+{% endtab %}
+
+{% tab title="Example" %}
+```javascript
+// TODO
+```
+{% endtab %}
+{% endtabs %}
+
 
 ## Visibility
 

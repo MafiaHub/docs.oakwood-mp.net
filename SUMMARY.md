@@ -2,6 +2,7 @@
 
 * [Server Setup](server-setup.md)
 * [Public API](public-api/README.md)
+  * [Events](public-api/events.md)
   * [Player](public-api/player.md)
   * [Vehicle](public-api/vehicle.md)
   * [HUD](public-api/hud.md)
