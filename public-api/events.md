@@ -42,8 +42,8 @@ Executed on server console input.
 #### Arguments
 
 | Type | Description |
-| string | Text |
 | :--- | :--- |
+| string | Text |
 
 {% endtab %}
 
