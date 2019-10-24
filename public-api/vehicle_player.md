@@ -30,7 +30,10 @@ Puts player into a vehicle at a specified seat.
 
 {% tab title="Example" %}
 ```javascript
-// TODO
+oak.cmd('putcar', async (pid, model) => {
+    const veh = await spawncar(pid, model, false)
+    oak.vehiclePlayerPut(veh, pid, 0)
+})
 ```
 {% endtab %}
 {% endtabs %}
