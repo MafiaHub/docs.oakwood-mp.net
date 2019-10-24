@@ -29,7 +29,9 @@ Send message to player.
 
 {% tab title="Example" %}
 ```javascript
-// TODO
+oak.cmd('testmsg', async(pid) => {
+    oak.chatSend(pid, 'Testovací zpráva')
+})
 ```
 {% endtab %}
 {% endtabs %}
