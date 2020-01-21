@@ -6,7 +6,7 @@ description: This page describes how to setup the server.
 
 ### Download server binaries
 
-We need to download server binaries [from GitHub](https://github.com/MafiaHub/Oakwood/releases/).
+We need to download server binaries [from Releases page](https://releases.mafiahub.dev/).
 
 Once you have the respective archive downloaded, unpack it to an empty folder.
 
